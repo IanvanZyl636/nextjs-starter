@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import LastPassFix from "@/app/common/components/last-pass-fix/last-pass-fix";
+import MenuLightDarkModeSwitch
+  from "@/app/common/components/menu/menu-light-dark-mode-switch/menu-light-dark-mode-switch";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <LastPassFix>
+          <MenuLightDarkModeSwitch/>
+          {children}
+        </LastPassFix>
+      </body>
     </html>
   )
 }
