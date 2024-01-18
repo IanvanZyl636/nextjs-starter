@@ -1,0 +1,13 @@
+version: "3"
+services:
+  web:
+    container_name: "<container name>"
+    image: "imagename"
+    build:
+      context: .
+    ports:
+      - target: 5000
+        published: 5000
+    environment:
+      NODE_ENV: 'production'
+      PORT: 5000
