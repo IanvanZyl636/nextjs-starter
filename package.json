@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
+    "start-docker": "docker compose up -d --no-deps --build",
+    "push-docker": "docker push <your docker image repository>",
     "lint": "next lint"
   },
   "dependencies": {
