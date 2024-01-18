@@ -3,7 +3,7 @@ import {ChangeEvent, useEffect, useState} from "react";
 
 
 export default function MenuLightDarkModeSwitch(){
-    const [isLightMode,setIsLightMode] = useState(false);
+    const [isLightMode,setIsLightMode] = useState(true);
 
     useEffect(()=>{
         const body = document.body;
